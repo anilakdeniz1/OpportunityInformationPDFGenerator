@@ -1,0 +1,99 @@
+<apex:page standardController="Opportunity" renderAs="PDF" extensions="pdfGeneratorController">
+	
+    <div style="display: flex; justify-content: space-between;">
+        <table width="100%">
+            <tr>
+                <td>
+                    <div style="text-align:right">
+                        <p>{!todayDate}</p>
+                    </div>     
+                </td>
+            </tr>
+        </table>  
+    </div>
+    
+    <div style="text-align: center;">
+        <p style="font-size: 20px;">
+            <strong>Opportunity Information Report</strong>
+        </p>
+    </div>
+    
+    <div style="text-align: left;">
+        <p style="font-size: 18px;">
+            <Strong>Opportunity Information</Strong> 
+        </p>
+    </div>
+    <div>
+        <table border="1" width="100%">
+            <tr>
+                <td width="35%"><strong>Opportunity Name</strong></td>
+                <td width="65%">{!opportunityName}</td>
+            </tr>
+            
+            <tr>
+                <td><strong>Stage</strong></td>
+                <td>{!stageName}</td>
+            </tr>
+
+            <tr>
+                <td><strong>Lead Source</strong></td>
+                <td>{!leadSource}</td>
+            </tr>
+
+            <tr>
+                <td><strong>Type</strong></td>
+                <td>{!type}</td>
+            </tr>
+
+            <tr>
+                <td><strong>Created Date</strong></td>
+                <td>{!createdDate}</td>
+            </tr>
+
+            <tr>
+                <td><strong>Close Date</strong></td>
+                <td>{!closeDate}</td>
+            </tr>
+
+            <tr>
+                <td><strong>Probability</strong></td>
+                <td>{!probability}</td>
+            </tr>
+    
+        </table>
+    </div>
+    
+     <div>
+        <p style="font-size: 18px;">
+            <Strong>Account Information</Strong> 
+        </p>
+    </div>
+    <div>
+        <table border="1" width="100%">
+            <tr>
+                <td width="35%"><strong>Account Name</strong></td>
+                <td width="65%">{!accountName}</td>
+            </tr>
+            
+            <tr>
+                <td><strong>City</strong></td>
+                <td>{!accountName}</td>
+            </tr>
+            
+            <tr>
+                <td><strong>Street</strong></td>
+                <td>{!accountBillingStreet}</td>
+            </tr>
+            
+            <tr>
+                <td><strong>Postal Code</strong></td>
+                <td>{!accountBillingpostalcode}</td>
+            </tr>
+
+            <tr>
+                <td><strong>Annual Revenue</strong></td>
+                <td>{!accountAnnualRevenue}</td>
+            </tr>
+        </table>
+    </div>
+</apex:page>
