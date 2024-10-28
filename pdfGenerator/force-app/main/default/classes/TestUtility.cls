@@ -4,6 +4,7 @@
 * @description Contains 
 *              
 */
+@isTest
 public with sharing class TestUtility {
     public static Account createAccount() {
         
